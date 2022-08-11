@@ -28,6 +28,6 @@ function createGrid(container, size) {
 createGrid(etch, 16);
 
 function createCustomGrid() {
-    const size = prompt("How large should the new grid be? (max: 100)", "16");
+    const size = prompt("How big should the new grid be? (max: 100)", "16");
     createGrid(etch, size);
 }
