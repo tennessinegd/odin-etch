@@ -1,6 +1,10 @@
 const etch = document.querySelector(".etch-container");
 
 function createGrid(container, size) {
+    while(container.firstElementChild) {
+        container.removeChild(container.firstElementChild);
+    }
+
     size = (size > 100) ? 100 : size;
     for (let i = 0; i < size; i++) {
         let row = document.createElement("div");
@@ -11,14 +15,19 @@ function createGrid(container, size) {
             row.appendChild(pixel);
         }
         container.appendChild(row);
+        
+        const pixels = document.querySelectorAll(".pixel");
+        for (let pixel of pixels) {
+            pixel.addEventListener("mouseenter", (e) => {
+                e.target.classList.add("painted");
+            })
+        }
     }
 }
 
 createGrid(etch, 16);
 
-const pixels = document.querySelectorAll(".pixel");
-for (let pixel of pixels) {
-    pixel.addEventListener("mouseenter", (e) => {
-        e.target.classList.add("painted");
-    })
+function createCustomGrid() {
+    const size = prompt("How large should the new grid be? (max: 100)", "16");
+    createGrid(etch, size);
 }
