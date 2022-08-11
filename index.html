@@ -11,9 +11,16 @@
 <body>
     <div class="content-container">
         <h1>Etch-a-Sketch</h1>
-        <div class="etch-contents">
-            <button onclick="createCustomGrid()">Create new grid</button>
-            <div class="etch-container"></div>
+        <div class="etch-contents-aligner">
+            <div class="etch-contents">
+                <button onclick="createCustomGrid()">Create new grid</button>
+                <div class="options">
+                    <button id="default">Default</button>
+                    <button id="color">Color mode</button>
+                    <button id="shade">Shade mode</button>
+                </div>
+                <div class="etch-container"></div>
+            </div>
         </div>
     </div>
     <footer>
