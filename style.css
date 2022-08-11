@@ -1,0 +1,33 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.etch-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.row:nth-child(1) {
+    padding-top: 1px;
+}
+
+.row {
+    background-color: gray;
+    flex: none;
+    padding: 1px;
+    padding-top: 0px;
+    display: flex;
+    gap: 1px;
+}
+
+.pixel {
+    box-sizing: border-box;
+    background-color: white;
+    height: 25px;
+    width: 25px;
+    flex: none;
+}
