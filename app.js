@@ -15,3 +15,10 @@ function createGrid(container, size) {
 }
 
 createGrid(etch, 16);
+
+const pixels = document.querySelectorAll(".pixel");
+for (let pixel of pixels) {
+    pixel.addEventListener("mouseenter", (e) => {
+        e.target.classList.add("painted");
+    })
+}
